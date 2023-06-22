@@ -15,19 +15,29 @@ from PyPDF2 import PdfReader
 
 st.set_page_config(
     page_title="Wazobia (The Nigerian Translator)",
-    page_icon=":robot:"
+    page_icon="🤖",
+    initial_sidebar_state="expanded"
 )
 
 load_dotenv()
 
 langs = ["Hausa", "Igbo", "Yoruba", "English"]
 
-st.title('Wazobia (The Nigerian Translator)')
+# Hide Streamlit style
+hide_st_style = """
+            <style>
+            footer {visibility: hidden;}
+            <style>
+"""
+
+st.markdown(hide_st_style, unsafe_allow_html=True)
+
+st.markdown('# Wazobia (The Nigerian Translator)')
 
 with st.sidebar:
      language = st.radio('Select language to translate to:', langs)
 
-
+st.markdown('### Wazobia Translate')
 prompt = st.text_input('Enter text here')
 
 trans_template = PromptTemplate(
@@ -43,10 +53,15 @@ llm = OpenAI(model_name="text-davinci-003", temperature=0)
 trans_chain = LLMChain(llm=llm, prompt=trans_template, verbose=True, output_key='translate', memory=memory)
 
 # If there's a prompt, process it and write out response on screen
-if prompt:
-    response = trans_chain({'trans': prompt})
-    st.write(response['translate'])
+if st.button("Translate"):
+    if prompt:
+        response = trans_chain({'trans': prompt})
+        st.info(response['translate'])
 
+
+st.divider()
+
+st.markdown('### Wazobia PDFQuery')
 
 pdf = st.file_uploader('Upload your PDF', type='pdf')
 
@@ -82,5 +97,5 @@ if pdf:
         chain = load_qa_chain(llm, chain_type='stuff')
         response = chain.run(input_documents=docs, question=user_question)
 
-        st.write(response)
+        st.info(response)
                 
