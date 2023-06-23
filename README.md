@@ -80,9 +80,7 @@ Once you have set up and launched Wazobia, follow these steps to utilize its fea
 
 5. Enter your questions in the provided field and click on the "Submit" button to receive answers based on the content of the PDF.
 
-6
-
-. Explore and interact with the user-friendly interface to experience the full capabilities of Wazobia.
+6. Explore and interact with the user-friendly interface to experience the full capabilities of Wazobia.
 
 ## Contributing
 
