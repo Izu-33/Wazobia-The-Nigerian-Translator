@@ -62,6 +62,7 @@ if st.button("Translate"):
 st.divider()
 
 st.markdown('### Wazobia PDFQuery')
+st.write('Wazobia PDFQuery can study your PDF file and answer questions about it.')
 
 pdf = st.file_uploader('Upload your PDF', type='pdf')
 
