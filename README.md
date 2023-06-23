@@ -111,13 +111,3 @@ Contributions to Wazobia are welcome! If you wish to contribute to the project, 
 ## License
 
 Wazobia is released under the [MIT License](LICENSE).
-
-## Acknowledgments
-
-We would like to express our gratitude to the developers and contributors of Langchain, Streamlit, and OpenAI's text-davinci-003 model. Their amazing work has made Wazobia possible.
-
-## Contact
-
-For any questions, suggestions, or inquiries, please contact us at wazobia.translator@example.com.
-
-Thank you for choosing Wazobia - The Nigerian Translator! We hope you find it valuable and enjoy using it to bridge language barriers in Nigeria.
