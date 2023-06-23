@@ -41,13 +41,13 @@ To set up Wazobia on your local machine, please follow these steps:
 1. Clone the Wazobia repository from GitHub:
 
    ```
-   git clone https://github.com/yourusername/wazobia.git
+   git clone https://github.com/Izu-33/Wazobia-The-Nigerian-Translator.git
    ```
 
 2. Navigate to the project directory:
 
    ```
-   cd wazobia
+   cd Wazobia-The-Nigerian-Translator
    ```
 
 3. Install the required Python dependencies:
