@@ -15,8 +15,7 @@ from PyPDF2 import PdfReader
 
 st.set_page_config(
     page_title="Wazobia (The Nigerian Translator)",
-    page_icon="🤖",
-    initial_sidebar_state="expanded"
+    page_icon="🤖"
 )
 
 load_dotenv()
