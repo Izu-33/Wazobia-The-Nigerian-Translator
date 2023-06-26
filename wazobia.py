@@ -49,8 +49,7 @@ trans_template = PromptTemplate(
 memory = ConversationBufferMemory(input_key='trans', memory_key='chat_history')
 
 # LLMs
-llm = OpenAI(model_name="text-davinci-003", temperature=0, 
-             openai_api_key = "") # Ensure to input your OpenAI key here
+llm = OpenAI(model_name="text-davinci-003", temperature=0)
 trans_chain = LLMChain(llm=llm, prompt=trans_template, verbose=True, output_key='translate', memory=memory)
 
 # If there's a prompt, process it and write out response on screen
