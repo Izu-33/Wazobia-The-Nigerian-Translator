@@ -46,7 +46,7 @@ To set up Wazobia on your local machine, please follow these steps:
    ```
    Activate new wazobia conda environment:
    ```
-   conda create --name wazobia
+   conda activate wazobia
    ```
 
    With Venv (Try python or python3):
