@@ -1,22 +1,17 @@
-import os
-import openai
 import streamlit as st
 from dotenv import load_dotenv
 from langchain.llms import OpenAI
 from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain
 from langchain.memory import ConversationBufferMemory
-from langchain.text_splitter import CharacterTextSplitter
-from langchain.embeddings.openai import OpenAIEmbeddings
-from langchain.vectorstores import FAISS
-from langchain.chains.question_answering import load_qa_chain
-from PyPDF2 import PdfReader
+from PIL import Image
 
+image = Image.open('images/wazo.png')
 
 st.set_page_config(
     page_title="Wazobia (The Nigerian Translator)",
     page_icon="🤖",
-    initial_sidebar_state="collapsed"
+    initial_sidebar_state="expanded"
 )
 
 load_dotenv()
@@ -32,6 +27,9 @@ hide_st_style = """
 
 st.markdown(hide_st_style, unsafe_allow_html=True)
 
+left_co, cent_co,last_co = st.columns(3)
+with cent_co:
+    st.image(image)
 st.markdown('# Wazobia (The Nigerian Translator)')
 
 with st.sidebar:
